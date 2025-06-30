@@ -1,0 +1,14 @@
+General:
+   logLevel: "debug"
+   defaultCertPath: "/path/to/certs/" # Optional
+   defaultApiKeyPath: "/root/.ssh/" # Optional
+
+hostname: # Repeat as needed
+   type: "device" # device or cert
+   cluster: "String" # Must match for active and passive members
+   apiKeyPath: "%hostname_panrc" # Optional
+
+cert_name_on_device: # Repeat as needed
+   type: "cert" # device or cert
+   devices: "hostname" # Must match a device above
+   certPath: "npm-61/%letsencrypt" # Full path or appended to default path of source cert files
